@@ -165,7 +165,8 @@
   }
 
   /* ---- Lightbox: click a gallery image to enlarge ---- */
-  const figs = [...document.querySelectorAll('.gallery-grid figure img')];
+  const figEls = [...document.querySelectorAll('.gallery-grid figure')];
+  const figs = figEls.map((f) => f.querySelector('img')).filter(Boolean);
   const lb = document.getElementById('lightbox');
   if (figs.length && lb) {
     const lbImg = document.getElementById('lbImg');
@@ -179,7 +180,7 @@
     const open = (i) => { show(i); lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; };
     const close = () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; };
 
-    figs.forEach((im, i) => { im.addEventListener('click', () => open(i)); });
+    figEls.forEach((f, i) => { f.addEventListener('click', () => open(i)); });
     document.getElementById('lbClose').addEventListener('click', close);
     document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
     document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });

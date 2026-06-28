@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log*
+
+# Heavy raw source assets (not used by the site; optimized copies live in assets/img)
+img/*.CR3
+
+# OS / editor
+.DS_Store
+Thumbs.db
