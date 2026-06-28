@@ -193,6 +193,50 @@
     });
   }
 
+  /* ---- 3D book: drag to rotate (mouse + touch), inertia, idle auto-spin ---- */
+  const book = document.getElementById('book3d');
+  if (book) {
+    let rx = -14, ry = -28, down = false, lx = 0, ly = 0, vx = 0, vy = 0;
+    let raf = 0, idleRaf = 0, interacted = false;
+    const clampX = (v) => Math.max(-78, Math.min(78, v));
+    const apply = () => { book.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`; };
+    apply();
+
+    const idle = () => { if (interacted) return; ry += 0.16; apply(); idleRaf = requestAnimationFrame(idle); };
+    idleRaf = requestAnimationFrame(idle);
+
+    const point = (e) => (e.touches ? e.touches[0] : e);
+    const onDown = (e) => {
+      down = true; interacted = true; cancelAnimationFrame(idleRaf); cancelAnimationFrame(raf);
+      const p = point(e); lx = p.clientX; ly = p.clientY; vx = vy = 0;
+      const hint = document.querySelector('.book3d-hint'); if (hint) hint.style.opacity = '0';
+    };
+    const onMove = (e) => {
+      if (!down) return;
+      const p = point(e);
+      const dx = p.clientX - lx, dy = p.clientY - ly;
+      lx = p.clientX; ly = p.clientY;
+      ry += dx * 0.55; rx = clampX(rx - dy * 0.55);
+      vx = dx * 0.55; vy = -dy * 0.55;
+      apply();
+      if (e.cancelable && e.touches) e.preventDefault();
+    };
+    const inertia = () => {
+      vx *= 0.94; vy *= 0.94;
+      ry += vx; rx = clampX(rx + vy);
+      apply();
+      if (Math.abs(vx) > 0.04 || Math.abs(vy) > 0.04) raf = requestAnimationFrame(inertia);
+    };
+    const onUp = () => { if (!down) return; down = false; inertia(); };
+
+    book.addEventListener('mousedown', onDown);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+    book.addEventListener('touchstart', onDown, { passive: true });
+    window.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('touchend', onUp);
+  }
+
   /* ---- Current year ---- */
   const yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
