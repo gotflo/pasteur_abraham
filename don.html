@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faire un don · Pasteur Abraham Andebi</title>
+  <meta name="description" content="Soutenez le ministère du Pasteur Abraham Andebi et l'Église Vases d'Honneur. Offrandes, dîmes, prémices et plus. Chaque don compte." />
+  <meta name="theme-color" content="#060f33" />
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav scrolled" id="nav">
+    <div class="wrap">
+      <a href="index.html" class="brand" aria-label="Abraham Andebi · Accueil">
+        <img src="assets/img/logo.png" alt="Logo Abraham Andebi" id="brandLogo" />
+        <span>
+          <span class="brand-name">Abraham Andebi</span><br />
+          <span class="brand-sub">Pasteur</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html#apropos">Qui suis-je</a>
+        <a href="index.html#cultes">Cultes</a>
+        <a href="index.html#predications">Prédications</a>
+        <a href="index.html#livre">Livre</a>
+        <a href="index.html#medias">Médias</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="index.html" class="btn btn-outline">← Retour au site</a>
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="index.html#apropos">Qui suis-je</a>
+    <a href="index.html#cultes">Cultes</a>
+    <a href="index.html#predications">Prédications</a>
+    <a href="index.html#livre">Livre</a>
+    <a href="index.html#medias">Médias</a>
+    <a href="index.html#contact">Contact</a>
+    <div class="m-cta">
+      <a href="index.html" class="btn btn-ghost">← Retour au site</a>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="don-hero">
+    <div class="wrap">
+      <span class="eyebrow center light">Soutenir le ministère</span>
+      <h1>Faire un don</h1>
+      <p class="verse-q">« Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte, car Dieu aime celui qui donne avec joie. »</p>
+      <div class="verse-ref">2 Corinthiens 9 : 7</div>
+    </div>
+  </section>
+
+  <!-- ===================== FORM ===================== -->
+  <section class="don-section">
+    <div class="don-wrap" id="donForm">
+      <!-- Left: form -->
+      <div class="don-card">
+        <div class="don-step">
+          <div class="label"><span class="num">1</span> Fréquence</div>
+          <div class="freq" id="freq">
+            <button type="button" data-freq="Une seule fois" class="active">Une seule fois</button>
+            <button type="button" data-freq="Chaque mois">Chaque mois</button>
+          </div>
+        </div>
+
+        <div class="don-step">
+          <div class="label"><span class="num">2</span> Choisir le montant</div>
+          <div class="amounts" id="amounts">
+            <button type="button" data-amt="5">5 $</button>
+            <button type="button" data-amt="10">10 $</button>
+            <button type="button" data-amt="20" class="active">20 $</button>
+            <button type="button" data-amt="50">50 $</button>
+            <button type="button" data-amt="100">100 $</button>
+            <button type="button" data-amt="500">500 $</button>
+          </div>
+          <div class="amount-custom">
+            <span class="cur">$</span>
+            <input type="number" id="customAmt" min="1" step="1" placeholder="Autre montant" inputmode="decimal" />
+          </div>
+        </div>
+
+        <div class="don-step">
+          <div class="label"><span class="num">3</span> Affectation</div>
+          <div class="don-field">
+            <label for="purpose">Je souhaite donner pour…</label>
+            <select id="purpose">
+              <option>Offrandes</option>
+              <option>Dîmes</option>
+              <option>Prémices</option>
+              <option>Partenaires Terrain</option>
+              <option>Construction</option>
+              <option>Autel d'adoration</option>
+              <option>Champs missionnaires</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="don-step">
+          <div class="label"><span class="num">4</span> Vos coordonnées</div>
+          <div class="don-grid-2">
+            <div class="don-field">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" placeholder="Votre nom" autocomplete="name" />
+            </div>
+            <div class="don-field">
+              <label for="donEmail">Courriel</label>
+              <input type="email" id="donEmail" placeholder="vous@exemple.com" autocomplete="email" />
+            </div>
+          </div>
+          <div class="don-field">
+            <label for="comment">Écrivez-nous un commentaire (facultatif)</label>
+            <textarea id="comment" placeholder="Un mot, un sujet de prière…"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: summary -->
+      <aside class="don-summary">
+        <h3>Votre don</h3>
+        <p class="sub">Récapitulatif de votre offrande</p>
+        <div class="row"><span>Fréquence</span><span id="sFreq">Une seule fois</span></div>
+        <div class="row"><span>Affectation</span><span id="sPurpose">Offrandes</span></div>
+        <div class="total"><span class="lbl">Total</span><span class="amt" id="sTotal">20 $</span></div>
+        <button type="button" class="btn btn-gold" id="submitDon">
+          Continuer
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <div class="secure">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Don sécurisé · CAD
+        </div>
+      </aside>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="wrap don-thanks" id="donThanks">
+      <div class="check">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2>Merci pour votre don. Soyez bénis&nbsp;!</h2>
+      <p>Votre générosité permet d'annoncer l'Évangile, de produire des enseignements et de soutenir celles et ceux qui en ont besoin.</p>
+      <div class="recap" id="recap"></div>
+      <div class="pay-note">
+        Pour finaliser votre offrande de façon sécurisée, un membre de l'équipe vous contactera, ou écrivez-nous à
+        <a href="mailto:contact@evhca.com">contact@evhca.com</a> · <a href="tel:+14383503229">(438) 350-3229</a>.
+      </div>
+      <div class="actions">
+        <a href="index.html" class="btn btn-outline">Retour à l'accueil</a>
+        <button type="button" class="btn btn-primary" id="againBtn">Faire un autre don</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="bottom" style="border-top:none;padding-top:0">
+        <span>© <span id="year"></span> Abraham Andebi. Tous droits réservés.</span>
+        <span>Partager l'amour de Christ pour changer le monde.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="totop" id="totop" aria-label="Haut de page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/don.js" defer></script>
+</body>
+</html>
