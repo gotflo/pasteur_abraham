@@ -1,38 +1,17 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pasteur Abraham Andebi · Ramener les cœurs vers Jésus-Christ</title>
-  <meta name="description" content="Site officiel du Pasteur Abraham Andebi, pasteur résident de l'Église Vases d'Honneur à Chicoutimi. Prédications, cultes, enseignements, livre et podcasts pour partager l'amour de Christ et changer le monde." />
-  <meta name="theme-color" content="#060f33" />
-  <meta name="author" content="Abraham Andebi" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pasteur Abraham Andebi" />
-  <meta property="og:description" content="Partager l'amour de Christ pour changer le monde. Prédications, cultes et enseignements." />
-  <meta property="og:image" content="assets/img/preach-1.jpg" />
-  <meta property="og:locale" content="fr_CA" />
-
-  <link rel="icon" type="image/png" href="assets/img/logo.png" />
-  <link rel="apple-touch-icon" href="assets/img/logo.png" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="preload" as="image" href="assets/img/hero.webp" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
+---
+title: Pasteur Abraham Andebi | Église Vases d'Honneur, Chicoutimi
+description: Abraham Andebi, pasteur résident de l'Église Vases d'Honneur à Chicoutimi (Saguenay). Cultes le dimanche et le mercredi, prédications vidéo et livre.
+path: /
+preload: /assets/img/hero.webp
+scripts: main.js, videos.js
+jsonld: home
+---
 
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
     <div class="wrap">
-      <a href="#accueil" class="brand" aria-label="Abraham Andebi · Accueil">
-        <img src="assets/img/logo-white.png" alt="Logo Abraham Andebi" id="brandLogo" />
+      <a href="/" class="brand" aria-label="Abraham Andebi · Accueil">
+        <img src="/assets/img/logo-white.png" alt="Logo Abraham Andebi" id="brandLogo" width="46" height="46" />
         <span>
           <span class="brand-name">Abraham Andebi</span><br />
           <span class="brand-sub">Pasteur</span>
@@ -49,8 +28,8 @@
       </nav>
 
       <div class="nav-cta">
-        <a href="https://www.youtube.com/@PasteurAbrahamAndebi" target="_blank" rel="noopener" class="btn btn-outline">Regarder</a>
-        <a href="don.html" class="btn btn-gold">Faire un don</a>
+        <a href="{{ site.social.youtube }}" target="_blank" rel="noopener" class="btn btn-outline">Regarder</a>
+        <a href="/don" class="btn btn-gold">Faire un don</a>
         <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -67,7 +46,7 @@
     <a href="#medias">Médias</a>
     <a href="#contact">Contact</a>
     <div class="m-cta">
-      <a href="https://www.youtube.com/@PasteurAbrahamAndebi" target="_blank" rel="noopener" class="btn btn-ghost">Regarder les prédications</a>
+      <a href="{{ site.social.youtube }}" target="_blank" rel="noopener" class="btn btn-ghost">Regarder les prédications</a>
     </div>
   </div>
 
@@ -75,12 +54,12 @@
   <section class="hero" id="accueil">
     <div class="hero-bg">
       <picture>
-        <source srcset="assets/img/hero.webp" type="image/webp" />
-        <img src="assets/img/hero.jpg" alt="Pasteur Abraham Andebi" fetchpriority="high" />
+        <source srcset="/assets/img/hero.webp" type="image/webp" />
+        <img src="/assets/img/hero.jpg" alt="Le pasteur Abraham Andebi, une Bible ouverte entre les mains" width="1800" height="1200" fetchpriority="high" decoding="async" />
       </picture>
     </div>
     <div class="hero-inner">
-      <span class="hero-tag reveal">✦ Église Vases d'Honneur · Chicoutimi</span>
+      <span class="hero-tag reveal">Église Vases d'Honneur · Chicoutimi</span>
       <h1 class="reveal d1">Ramener les cœurs <span class="accent">vers Jésus-Christ</span></h1>
       <p class="sub reveal d2">Pasteur, enseignant et serviteur de Dieu. Une parole vivante pour la croissance spirituelle, la délivrance et la guérison de l'âme. <em>Partager l'amour de Christ pour changer le monde.</em></p>
       <div class="hero-actions reveal d3">
@@ -116,8 +95,8 @@
         <div class="frame"></div>
         <div class="photo">
           <picture>
-            <source srcset="assets/img/about.webp" type="image/webp" />
-            <img src="assets/img/about.jpg" alt="Portrait du Pasteur Abraham Andebi" loading="lazy" />
+            <source srcset="/assets/img/about.webp" type="image/webp" />
+            <img src="/assets/img/about.jpg" alt="Portrait du Pasteur Abraham Andebi" width="1100" height="1650" loading="lazy" decoding="async" />
           </picture>
         </div>
         <div class="badge">
@@ -174,7 +153,7 @@
           <div class="type">Mercredi de l'intercession</div>
           <div class="time">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            19 h 30 – 21 h 30
+            19 h 30 à 21 h 30
           </div>
           <p>Un temps puissant de prière collective et d'intercession.</p>
           <span class="mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> En personne &amp; en ligne</span>
@@ -187,13 +166,13 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
           </div>
           <div>
-            <b>70 rue Racine Est</b><br />
-            <span>Chicoutimi, QC · G7H 2P1</span>
+            <b>{{ site.address.streetAddress }}</b><br />
+            <span>{{ site.address.addressLocality }}, {{ site.address.addressRegion }} · {{ site.address.postalCode }}</span>
           </div>
         </div>
         <div style="display:flex;gap:14px;flex-wrap:wrap">
-          <a href="https://maps.google.com/?q=70+rue+Racine+Est+Chicoutimi+QC" target="_blank" rel="noopener" class="btn btn-gold">Itinéraire</a>
-          <a href="https://vasesdhonneurchicoutimi.org/" target="_blank" rel="noopener" class="btn btn-ghost">Site de l'église</a>
+          <a href="{{ site.mapUrl }}" target="_blank" rel="noopener" class="btn btn-gold">Itinéraire</a>
+          <a href="{{ site.church.url }}" target="_blank" rel="noopener" class="btn btn-ghost">Site de l'église</a>
         </div>
       </div>
     </div>
@@ -205,49 +184,15 @@
       <div class="section-head center reveal">
         <span class="eyebrow center">Prédications</span>
         <h2 class="h-section">Des messages qui transforment</h2>
-        <p class="lead">Une sélection d'enseignements pour nourrir votre foi au quotidien. Retrouvez l'intégralité sur la chaîne YouTube.</p>
+        <p class="lead">Les derniers enseignements publiés, pour nourrir votre foi au quotidien. Retrouvez l'intégralité sur la chaîne YouTube.</p>
       </div>
 
-      <div class="sermon-grid">
-        <a class="sermon-card reveal" href="https://www.youtube.com/watch?v=c1ichaI-Q1Y" target="_blank" rel="noopener">
-          <div class="thumb">
-            <span class="cat">Croissance</span>
-            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-            <picture><source srcset="assets/img/preach-1.webp" type="image/webp"><img src="assets/img/preach-1.jpg" alt="Prédication" loading="lazy"></picture>
-          </div>
-          <div class="body">
-            <h3>Comment croître réellement spirituellement</h3>
-            <span class="meta">Regarder <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <a class="sermon-card reveal d1" href="https://www.youtube.com/watch?v=wSc1nmX_OIM" target="_blank" rel="noopener">
-          <div class="thumb">
-            <span class="cat">Combat spirituel</span>
-            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-            <picture><source srcset="assets/img/preach-2.webp" type="image/webp"><img src="assets/img/preach-2.jpg" alt="Prédication" loading="lazy"></picture>
-          </div>
-          <div class="body">
-            <h3>Triompher de l'empire du diable</h3>
-            <span class="meta">Regarder <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <a class="sermon-card reveal d2" href="https://www.youtube.com/watch?v=M2ZezNdbp9w" target="_blank" rel="noopener">
-          <div class="thumb">
-            <span class="cat">Vie chrétienne</span>
-            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-            <picture><source srcset="assets/img/preach-3.webp" type="image/webp"><img src="assets/img/preach-3.jpg" alt="Prédication" loading="lazy"></picture>
-          </div>
-          <div class="body">
-            <h3>Entreprendre en Christ</h3>
-            <span class="meta">Regarder <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
+      <div class="sermon-grid" id="videoGrid" data-endpoint="/api/videos.php">
+{{{ videos }}}
       </div>
 
       <div class="center-cta reveal">
-        <a href="https://www.youtube.com/@PasteurAbrahamAndebi" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="{{ site.social.youtube }}" target="_blank" rel="noopener" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.4-5.1a2.7 2.7 0 0 0-1.9-1.9C19 4.5 12 4.5 12 4.5s-7 0-8.7.5A2.7 2.7 0 0 0 1.4 6.9C1 8.5 1 12 1 12s0 3.5.4 5.1a2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.7.5 8.7.5s7 0 8.7-.5a2.7 2.7 0 0 0 1.9-1.9C23 15.5 23 12 23 12zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>
           Toutes les prédications
         </a>
@@ -265,15 +210,15 @@
             <!-- FRONT -->
             <div class="face front">
               <picture>
-                <source srcset="assets/img/livre-front.webp" type="image/webp" />
-                <img src="assets/img/livre-front.jpg" alt="Couverture du livre L'Art de briser les jougs et prospérer, par Abraham Andebi" />
+                <source srcset="/assets/img/livre-front.webp" type="image/webp" />
+                <img src="/assets/img/livre-front.jpg" width="900" height="1439" loading="lazy" decoding="async" alt="Couverture du livre L'Art de briser les jougs et prospérer, par Abraham Andebi" />
               </picture>
             </div>
             <!-- BACK -->
             <div class="face back">
               <picture>
-                <source srcset="assets/img/livre-back.webp" type="image/webp" />
-                <img src="assets/img/livre-back.jpg" alt="Quatrième de couverture du livre L'Art de briser les jougs et prospérer" />
+                <source srcset="/assets/img/livre-back.webp" type="image/webp" />
+                <img src="/assets/img/livre-back.jpg" width="600" height="960" loading="lazy" decoding="async" alt="Quatrième de couverture du livre L'Art de briser les jougs et prospérer" />
               </picture>
             </div>
             <!-- SPINE (left) -->
@@ -313,14 +258,14 @@
         <h2 class="h-section">Des ressources pour grandir, partout</h2>
       </div>
       <div class="media-grid">
-        <a class="media-card reveal" href="https://www.youtube.com/@PasteurAbrahamAndebi" target="_blank" rel="noopener">
+        <a class="media-card reveal" href="{{ site.social.youtube }}" target="_blank" rel="noopener">
           <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.4-5.1a2.7 2.7 0 0 0-1.9-1.9C19 4.5 12 4.5 12 4.5s-7 0-8.7.5A2.7 2.7 0 0 0 1.4 6.9C1 8.5 1 12 1 12s0 3.5.4 5.1a2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.7.5 8.7.5s7 0 8.7-.5a2.7 2.7 0 0 0 1.9-1.9C23 15.5 23 12 23 12zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></div>
           <h3>Prédications vidéo</h3>
           <p>Tous les enseignements, cultes et séries en intégralité sur la chaîne YouTube officielle.</p>
           <span class="link">Voir la chaîne <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
 
-        <a class="media-card reveal d1" href="https://www.instagram.com/abraham_andebi/" target="_blank" rel="noopener">
+        <a class="media-card reveal d1" href="{{ site.social.instagram }}" target="_blank" rel="noopener">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></div>
           <h3>Talk with AA</h3>
           <p>Des échanges courts et inspirants sur la foi, la vie et les questions du quotidien.</p>
@@ -345,11 +290,11 @@
         <h2 class="h-section">Des vies touchées par la Parole</h2>
       </div>
       <div class="gallery-grid reveal">
-        <figure class="tall"><picture><source srcset="assets/img/preach-3.webp" type="image/webp"><img src="assets/img/preach-3.jpg" alt="Culte" loading="lazy"></picture></figure>
-        <figure class="wide"><picture><source srcset="assets/img/preach-1.webp" type="image/webp"><img src="assets/img/preach-1.jpg" alt="Prédication" loading="lazy"></picture></figure>
-        <figure><picture><source srcset="assets/img/ministry.webp" type="image/webp"><img src="assets/img/ministry.jpg" alt="Imposition des mains" loading="lazy"></picture></figure>
-        <figure><picture><source srcset="assets/img/preach-2.webp" type="image/webp"><img src="assets/img/preach-2.jpg" alt="Louange" loading="lazy"></picture></figure>
-        <figure class="wide"><picture><source srcset="assets/img/portrait.webp" type="image/webp"><img src="assets/img/portrait.jpg" alt="Portrait" loading="lazy"></picture></figure>
+        <figure class="tall"><picture><source srcset="/assets/img/preach-3.webp" type="image/webp"><img src="/assets/img/preach-3.jpg" alt="Culte à l'Église Vases d'Honneur" width="1600" height="1067" loading="lazy" decoding="async"></picture></figure>
+        <figure class="wide"><picture><source srcset="/assets/img/preach-1.webp" type="image/webp"><img src="/assets/img/preach-1.jpg" alt="Le pasteur Abraham Andebi en prédication" width="1152" height="645" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/img/ministry.webp" type="image/webp"><img src="/assets/img/ministry.jpg" alt="Imposition des mains" width="1152" height="768" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/img/preach-2.webp" type="image/webp"><img src="/assets/img/preach-2.jpg" alt="Louange" width="1152" height="664" loading="lazy" decoding="async"></picture></figure>
+        <figure class="wide"><picture><source srcset="/assets/img/portrait.webp" type="image/webp"><img src="/assets/img/portrait.jpg" alt="Portrait du pasteur Abraham Andebi" width="1100" height="733" loading="lazy" decoding="async"></picture></figure>
       </div>
     </div>
   </section>
@@ -362,21 +307,21 @@
         <h2 class="h-section">Entrons en relation</h2>
         <p class="lead">Une question, un sujet de prière, ou simplement l'envie d'en savoir plus ? Nous serions heureux de vous répondre.</p>
         <div class="contact-list">
-          <a href="mailto:pstabrahamandebi@gmail.com">
+          <a href="mailto:{{ site.email }}">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-            <div><b>pstabrahamandebi@gmail.com</b><span>Courriel · écrivez au pasteur</span></div>
+            <div><b>{{ site.email }}</b><span>Courriel · écrivez au pasteur</span></div>
           </a>
-          <a href="tel:+15812221438">
+          <a href="tel:{{ site.telephone }}">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-            <div><b>+1 (581) 222-1438</b><span>Appel direct</span></div>
+            <div><b>{{ site.telephoneDisplay }}</b><span>Appel direct</span></div>
           </a>
-          <a href="https://wa.me/15812221438" target="_blank" rel="noopener">
+          <a href="{{ site.whatsapp }}" target="_blank" rel="noopener">
             <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.3c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1z"/></svg></span>
             <div><b>WhatsApp</b><span>Écrivez-nous directement</span></div>
           </a>
-          <a href="https://maps.google.com/?q=70+rue+Racine+Est+Chicoutimi+QC" target="_blank" rel="noopener">
+          <a href="{{ site.mapUrl }}" target="_blank" rel="noopener">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-            <div><b>70 rue Racine Est</b><span>Chicoutimi, QC · G7H 2P1</span></div>
+            <div><b>{{ site.address.streetAddress }}</b><span>{{ site.address.addressLocality }}, {{ site.address.addressRegion }} · {{ site.address.postalCode }}</span></div>
           </a>
         </div>
       </div>
@@ -385,9 +330,9 @@
         <span class="eyebrow">Soutenir le ministère</span>
         <h3>Faites partie de l'œuvre</h3>
         <p>Votre offrande permet d'annoncer l'Évangile, de produire des enseignements et de soutenir celles et ceux qui en ont besoin. Chaque don compte.</p>
-        <a href="don.html" class="btn btn-gold">Faire un don</a>
+        <a href="/don" class="btn btn-gold">Faire un don</a>
 
-        <form class="newsletter" id="newsletterForm" action="https://formsubmit.co/ajax/pstabrahamandebi@gmail.com" method="POST" novalidate>
+        <form class="newsletter" id="newsletterForm" action="https://formsubmit.co/ajax/{{ site.email }}" method="POST" novalidate>
           <label for="email">Recevez les enseignements par courriel</label>
           <div class="field">
             <input type="email" id="email" name="email" placeholder="Votre adresse courriel" required />
@@ -409,13 +354,13 @@
     <div class="wrap">
       <div class="top">
         <div class="brand-col">
-          <img src="assets/img/logo.png" alt="Abraham Andebi" />
+          <img src="/assets/img/logo.png" alt="Logo Abraham Andebi" width="600" height="600" loading="lazy" decoding="async" />
           <p>Pasteur Abraham Andebi · partager l'amour de Christ pour changer le monde, une vie à la fois.</p>
           <div class="socials">
-            <a href="https://www.youtube.com/@PasteurAbrahamAndebi" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.4-5.1a2.7 2.7 0 0 0-1.9-1.9C19 4.5 12 4.5 12 4.5s-7 0-8.7.5A2.7 2.7 0 0 0 1.4 6.9C1 8.5 1 12 1 12s0 3.5.4 5.1a2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.7.5 8.7.5s7 0 8.7-.5a2.7 2.7 0 0 0 1.9-1.9C23 15.5 23 12 23 12zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-            <a href="https://www.facebook.com/Abraham.Andebi" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
-            <a href="https://www.instagram.com/abraham_andebi/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
-            <a href="https://www.tiktok.com/@abrahamandebi" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 5.6a4.8 4.8 0 0 1-3.3-1.3v8.9a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.9a2.7 2.7 0 1 0 1.9 2.6V2h2.8a4.8 4.8 0 0 0 3.3 4.3z"/></svg></a>
+            <a href="{{ site.social.youtube }}" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.4-5.1a2.7 2.7 0 0 0-1.9-1.9C19 4.5 12 4.5 12 4.5s-7 0-8.7.5A2.7 2.7 0 0 0 1.4 6.9C1 8.5 1 12 1 12s0 3.5.4 5.1a2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.7.5 8.7.5s7 0 8.7-.5a2.7 2.7 0 0 0 1.9-1.9C23 15.5 23 12 23 12zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+            <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+            <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="{{ site.social.tiktok }}" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 5.6a4.8 4.8 0 0 1-3.3-1.3v8.9a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.9a2.7 2.7 0 1 0 1.9 2.6V2h2.8a4.8 4.8 0 0 0 3.3 4.3z"/></svg></a>
           </div>
         </div>
         <div>
@@ -431,11 +376,11 @@
         <div>
           <h5>Église</h5>
           <div class="links">
-            <a href="https://vasesdhonneurchicoutimi.org/" target="_blank" rel="noopener">Vases d'Honneur</a>
-            <a href="https://maps.google.com/?q=70+rue+Racine+Est+Chicoutimi+QC" target="_blank" rel="noopener">70 rue Racine Est</a>
-            <a href="mailto:pstabrahamandebi@gmail.com">pstabrahamandebi@gmail.com</a>
-            <a href="tel:+15812221438">+1 (581) 222-1438</a>
-            <a href="don.html">Faire un don</a>
+            <a href="{{ site.church.url }}" target="_blank" rel="noopener">Vases d'Honneur</a>
+            <a href="{{ site.mapUrl }}" target="_blank" rel="noopener">{{ site.address.streetAddress }}</a>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            <a href="tel:{{ site.telephone }}">{{ site.telephoneDisplay }}</a>
+            <a href="/don">Faire un don</a>
           </div>
         </div>
       </div>
@@ -457,7 +402,3 @@
     <figure class="lb-stage"><img id="lbImg" src="" alt="" /></figure>
     <button class="lb-btn lb-next" id="lbNext" aria-label="Image suivante">&rsaquo;</button>
   </div>
-
-  <script src="assets/js/main.js" defer></script>
-</body>
-</html>

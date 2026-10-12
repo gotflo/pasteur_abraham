@@ -1,0 +1,65 @@
+{
+  "url": "https://abrahamandebi.com",
+  "siteName": "Pasteur Abraham Andebi",
+  "lang": "fr-CA",
+  "ogLocale": "fr_CA",
+  "themeColor": "#060f33",
+
+  "person": {
+    "name": "Abraham Andebi",
+    "honorificPrefix": "Pasteur",
+    "jobTitle": "Pasteur résident",
+    "description": "Pasteur résident de l'Église Vases d'Honneur à Chicoutimi. Auteur du livre L'Art de briser les jougs et prospérer.",
+    "image": "/assets/img/portrait.jpg"
+  },
+
+  "church": {
+    "name": "Église Vases d'Honneur",
+    "url": "https://vasesdhonneurchicoutimi.org/"
+  },
+
+  "email": "pstabrahamandebi@gmail.com",
+  "telephone": "+15812221438",
+  "telephoneDisplay": "+1 (581) 222-1438",
+  "whatsapp": "https://wa.me/15812221438",
+
+  "address": {
+    "streetAddress": "70 rue Racine Est",
+    "addressLocality": "Chicoutimi",
+    "addressRegion": "QC",
+    "postalCode": "G7H 2P1",
+    "addressCountry": "CA"
+  },
+  "areaServed": ["Chicoutimi", "Saguenay", "Saguenay–Lac-Saint-Jean"],
+  "mapUrl": "https://maps.google.com/?q=70+rue+Racine+Est+Chicoutimi+QC",
+
+  "donation": {
+    "email": "contact@evhca.com",
+    "telephone": "+14383503229",
+    "telephoneDisplay": "(438) 350-3229"
+  },
+
+  "social": {
+    "youtube": "https://www.youtube.com/@PasteurAbrahamAndebi",
+    "facebook": "https://www.facebook.com/Abraham.Andebi",
+    "instagram": "https://www.instagram.com/abraham_andebi/",
+    "tiktok": "https://www.tiktok.com/@abrahamandebi"
+  },
+
+  "youtube": {
+    "channelId": "UCjnx--E5SwGATKxySKTAadA",
+    "maxVideos": 5
+  },
+
+  "logo": {
+    "src": "/assets/img/logo.png",
+    "width": 600,
+    "height": 600
+  },
+  "image": {
+    "src": "/assets/img/og-image.jpg",
+    "width": 1200,
+    "height": 630,
+    "alt": "Le pasteur Abraham Andebi, une Bible ouverte entre les mains"
+  }
+}

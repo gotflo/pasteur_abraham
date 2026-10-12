@@ -14,7 +14,7 @@
   const onScroll = () => {
     const scrolled = window.scrollY > 40;
     nav.classList.toggle('scrolled', scrolled);
-    brandLogo.src = scrolled ? 'assets/img/logo.png' : 'assets/img/logo-white.png';
+    brandLogo.src = scrolled ? '/assets/img/logo.png' : '/assets/img/logo-white.png';
     totop.classList.toggle('show', window.scrollY > 600);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -83,7 +83,7 @@
       entries.forEach((e) => {
         if (e.isIntersecting) {
           const id = e.target.id;
-          navLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+          navLinks.forEach((l) => l.classList.toggle('active', l.hash === '#' + id));
         }
       });
     }, { threshold: 0.4 });
@@ -118,7 +118,7 @@
           body: new FormData(form),
         });
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        setNote('🙏 Merci ! Votre inscription a bien été enregistrée.', '#e3c879');
+        setNote('Merci ! Votre inscription a bien été enregistrée.', '#e3c879');
         form.reset();
       } catch (err) {
         setNote('Une erreur est survenue. Écrivez-nous à pstabrahamandebi@gmail.com.', '#ffd3a6');

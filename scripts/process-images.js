@@ -1,11 +1,12 @@
 // Image optimization pipeline for the Abraham Andebi website.
 // Produces web-optimized WebP + JPG fallbacks from the raw source photos.
+// Usage: node scripts/process-images.js [name ...]  (no name = every job)
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
 const SRC = path.join(__dirname, '..', 'img');
-const OUT = path.join(__dirname, '..', 'assets', 'img');
+const OUT = path.join(__dirname, '..', 'public', 'assets', 'img');
 fs.mkdirSync(OUT, { recursive: true });
 
 // [source, output-basename, max-width]
@@ -20,8 +21,12 @@ const jobs = [
   ['fcb3.jpg',     'ministry',  1600],
 ];
 
+const only = process.argv.slice(2);
+const wanted = (name) => !only.length || only.includes(name);
+
 (async () => {
   for (const [src, name, width] of jobs) {
+    if (!wanted(name)) continue;
     const input = sharp(path.join(SRC, src)).rotate(); // auto-orient via EXIF
     const resized = input.resize({ width, withoutEnlargement: true });
 
@@ -32,13 +37,24 @@ const jobs = [
     console.log(`${name.padEnd(10)} ${(size / 1024).toFixed(0)} KB (webp)`);
   }
 
-  // Logo: keep PNG, also a tight WebP copy
-  await sharp(path.join(SRC, 'logo.png')).resize({ width: 600 }).png({ quality: 90 }).toFile(path.join(OUT, 'logo.png'));
-  // White logo variant for dark backgrounds (recolor black -> white)
-  await sharp(path.join(SRC, 'logo.png'))
-    .resize({ width: 600 })
-    .negate({ alpha: false })
-    .toFile(path.join(OUT, 'logo-white.png'));
+  // Social sharing image (Open Graph / Twitter): 1200x630, JPG only
+  if (wanted('og')) {
+    await sharp(path.join(SRC, '7I0A3084.JPG')).rotate()
+      .resize({ width: 1200, height: 630, fit: 'cover', position: 'top' })
+      .jpeg({ quality: 82, mozjpeg: true })
+      .toFile(path.join(OUT, 'og-image.jpg'));
+    console.log('og-image   1200x630 (jpg)');
+  }
+
+  if (wanted('logo')) {
+    // Logo: keep PNG
+    await sharp(path.join(SRC, 'logo.png')).resize({ width: 600 }).png({ quality: 90 }).toFile(path.join(OUT, 'logo.png'));
+    // White logo variant for dark backgrounds (recolor black -> white)
+    await sharp(path.join(SRC, 'logo.png'))
+      .resize({ width: 600 })
+      .negate({ alpha: false })
+      .toFile(path.join(OUT, 'logo-white.png'));
+  }
 
   console.log('Done.');
 })();

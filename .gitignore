@@ -7,3 +7,6 @@ img/*.CR3
 # OS / editor
 .DS_Store
 Thumbs.db
+
+# Build output
+dist/

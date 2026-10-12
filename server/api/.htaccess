@@ -1,0 +1,9 @@
+# Seul le point d'API videos.php est accessible depuis le web.
+Options -Indexes
+
+<IfModule mod_authz_core.c>
+  Require all denied
+  <Files "videos.php">
+    Require all granted
+  </Files>
+</IfModule>
