@@ -30,7 +30,7 @@
     "postalCode": "G7H 2P1",
     "addressCountry": "CA"
   },
-  "areaServed": ["Chicoutimi", "Saguenay", "Saguenay–Lac-Saint-Jean"],
+  "areaServed": ["Chicoutimi", "Saguenay", "Saguenay-Lac-Saint-Jean"],
   "mapUrl": "https://maps.google.com/?q=70+rue+Racine+Est+Chicoutimi+QC",
 
   "donation": {

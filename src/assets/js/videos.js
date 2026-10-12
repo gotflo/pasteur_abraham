@@ -29,7 +29,7 @@
       ['year', 31536000], ['month', 2592000], ['week', 604800],
       ['day', 86400], ['hour', 3600], ['minute', 60]
     ];
-    if (abs < 60) return 'À l’instant';
+    if (abs < 60) return "À l'instant";
     for (var i = 0; i < units.length; i++) {
       if (abs >= units[i][1]) {
         var n = Math.round(diff / units[i][1]);
@@ -66,7 +66,7 @@
     var meta = [
       when ? '<time datetime="' + esc(v.published) + '">' + esc(when) + '</time>' : '',
       esc(formatViews(v.views))
-    ].filter(Boolean).join(' · ');
+    ].filter(Boolean).join(', ');
     return '<a class="sermon-card reveal in' + (i === 0 ? ' featured' : '') + '" href="https://www.youtube.com/watch?v=' + id + '" target="_blank" rel="noopener">' +
       '<div class="thumb">' +
         (i === 0 ? '<span class="cat">Nouveau</span>' : '') +

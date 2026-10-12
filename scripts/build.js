@@ -113,7 +113,7 @@ const videoCards = (videos) => videos.map((v, i) => {
   const meta = [
     v.published ? `<time datetime="${esc(v.published)}">${esc(formatDate(v.published))}</time>` : '',
     esc(formatViews(v.views)),
-  ].filter(Boolean).join(' · ');
+  ].filter(Boolean).join(', ');
   return `        <a class="sermon-card reveal${i ? ` d${Math.min(i, 3)}` : ' featured'}" href="https://www.youtube.com/watch?v=${v.videoId}" target="_blank" rel="noopener">
           <div class="thumb">
             ${i === 0 ? '<span class="cat">Nouveau</span>\n            ' : ''}<span class="play">${PLAY}</span>
