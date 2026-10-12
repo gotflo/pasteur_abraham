@@ -108,8 +108,8 @@
 
       const original = btn.textContent;
       btn.disabled = true;
-      btn.textContent = 'Envoi…';
-      setNote('Inscription en cours…', 'rgba(255,255,255,.6)');
+      btn.textContent = 'Envoi...';
+      setNote('Inscription en cours...', 'rgba(255,255,255,.6)');
 
       try {
         const res = await fetch(form.action, {
